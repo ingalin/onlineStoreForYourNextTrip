@@ -448,3 +448,87 @@ button.removeButton {
     opacity: 0.75;
 }
 
+/* Media queries */
+
+@media (max-width: 950px) {
+    li {
+        min-height: 200px;
+    }
+
+    .description {
+        min-height: 90px;
+    }
+}
+
+@media (max-width: 765px) {
+
+    ul {
+        align-items: center;
+    }
+
+    li {
+        width: 100%;
+        min-height: 330px;
+    }
+
+    .description {
+        min-height: 50px;
+    } 
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .flexHeader{
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .cart i {
+        font-size: 2rem;
+    }
+
+    .countItems {
+        font-size: 2rem;
+    }
+
+    .cartText {
+        font-size: 1.6rem;
+    }
+
+    .cart {
+        padding: 3px;
+        margin: 0;
+    }
+
+    li {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .description {
+        font-size: 1.8rem;
+        width: 90%;
+        padding-bottom: 2px;
+    }
+
+    .price {
+        font-size: 3rem;
+    }
+
+    li {
+        min-height: 180px;
+    }
+
+    li button {
+        margin-left: 2px;
+    }
+}
+
