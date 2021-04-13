@@ -16,7 +16,7 @@ body {
     font-size: 1.5rem;
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
-    color: #220f0f;
+    color: #1c1c1c;
     background-color: #fafaff;
     position: relative;
 }
@@ -165,7 +165,7 @@ input[type="number"] {
     margin: 10px 15px;
     width: 85px;
     padding: 3px 10px;
-    border: 3px #ffffff solid; 
+    border: 3px #fafaff solid; 
     background-color: rgba(28, 28, 28, 0.3);
     color: #fafaff;
     font-size: 2rem;
@@ -188,9 +188,9 @@ h4 {
     font-size: 1rem;
     font-weight: 500;
     padding: 5px;
-    color: #ffffff;
+    color: #fafaff;
     background: none;
-    border: 3px #ffffff solid; 
+    border: 3px #fafaff solid; 
 }
 
 button {
@@ -198,18 +198,18 @@ button {
     font-size: 1.8rem;
     font-weight: 500;
     padding: 10px 10px;
-    color: #ffffff;
+    color: #fafaff;
     background: none;
-    border: 3px #ffffff solid; 
+    border: 3px #fafaff solid; 
 }
 
 button:hover, button:focus {
-    background: #232221;
-    border: 3px #ffffff solid; 
+    background: #1c1c1c;
+    border: 3px #fafaff solid; 
 }
 
 button:hover, button:focus {
-    background: #232221;
+    background: #1c1c1c;
 } 
 
 button[disabled]:hover, button[disabled]:focus {
@@ -378,21 +378,21 @@ button[disabled]:hover, button[disabled]:focus {
 }
 
 
- /* Popover */
+/* Popover */
 /* Popover Header */
 .popover-header {
-  background-color: #eef0f2;
-  color: #1c1c1c;
-  font-size: 1.6rem;
-  font-weight: 600;
+    background-color: #eef0f2;
+    color: #1c1c1c;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 /* Popover Body */
 .popover-body {
-  background-color: #6e7868;
-  color: #fafaff;
-  padding: 10px;
-  font-size: 1.6rem;
+    background-color: #6e7868;
+    color: #fafaff;
+    padding: 10px;
+    font-size: 1.6rem;
 }
 
 /* Modal */

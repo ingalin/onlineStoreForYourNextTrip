@@ -1,5 +1,5 @@
 // Insert data into new forms
-//Cheeck if fields are not empty
+//Check if fields are not empty
 //Create new forms
 //Create Total Amounts form
 //Check for duplicates
@@ -83,10 +83,6 @@ $(document).ready(function () {
 
     //Add the item to the Cart
     $submit.on('submit', function (event) {
-
-
-
-
         //Prevent default
         event.preventDefault();
         hidePopover(".startquantity");
@@ -226,6 +222,7 @@ $(document).ready(function () {
                 $(y).closest(`div`).remove();
                 //If it was the last line, delete also Total Amounts and a header
                 if ($(`#totalPriceAllItems`).val() === "0.00") {
+                    // Show modal
                     let myModalInvoiceDeleted = new bootstrap.Modal(document.getElementById('myModalInvoiceDeleted'));
                     myModalInvoiceDeleted.show();
                     $(`form`).remove(`.totalAmounts`);
