@@ -22,7 +22,7 @@ $(document).ready(function () {
     let currentTotal = 0;
 
     // Show or hide invoice
-    $(".cart").on("click", function(){
+    $(".cart").on("click", function () {
         $(".itemList").addClass("hideFull");
         $(".invoiceSection").removeClass("hideFull");
         $(".cartText").html("Your Cart:");
@@ -41,7 +41,7 @@ $(document).ready(function () {
         }, 1000);
     }
 
-    $("input").focusin(function(){
+    $("input").focusin(function () {
         hidePopover(".startquantity");
     });
 
@@ -53,13 +53,15 @@ $(document).ready(function () {
         totalPerItem = parseFloat((pricePerItem * enteredQuantity).toFixed(2));
         //Inserting data into new tables
         $invForms.prepend(`<div class="formatText">
+            <div class="textPrices">
             <p class = "itemTable">${description}</p>
             <p class = "quantityTable">${enteredQuantity}</p>
             <p class = "priceTable">${pricePerItem}</p>
             <p class = "totalPrice">${totalPerItem}</p>
-            <button class = "removeButton" id="remove${idCounter}" aria-label="remove one"><i class="fas fa-minus-circle" aria-hidden="true"></i></button>
-            <button class = "addButton" id="add${idCounter}" aria-label="add one"><i class="fas fa-plus-circle" aria-hidden="true"></i></button>
-            <button class = "deleteButton" id="delete${idCounter}" aria-label="delete item"><i class="fas fa-trash-alt"  aria-hidden="true"></i></button></div>`);
+            </div>
+            <button class = "removeButton styleButtons" id="remove${idCounter}" aria-label="remove one"><i class="fas fa-minus-circle" aria-hidden="true"></i></button>
+            <button class = "addButton styleButtons" id="add${idCounter}" aria-label="add one"><i class="fas fa-plus-circle" aria-hidden="true"></i></button>
+            <button class = "deleteButton styleButtons" id="delete${idCounter}" aria-label="delete item"><i class="fas fa-trash-alt"  aria-hidden="true"></i></button></div>`);
         //Calculating Total for all items
         totalPerAllItems = parseFloat($(`#totalPriceAllItems`).val());
         totalPerAllItems = parseFloat((totalPerAllItems + totalPerItem).toFixed(2));

@@ -160,18 +160,19 @@
     </section>
     <section class="invoiceSection hideFull">
         <div class="invoiceAll wrapper">
-            <div class="headerNames">
-                <h3 class="itemName">Item</h3>
-                <h3 class="detailsHeader">QTY</h3>
-                <h3 class="detailsHeader">Price</h3>
-                <h3 class="detailsHeader">Total</h3>
-                <h3 class="buttonEnd remove">Remove</h3>
-                <h3 class="buttonEnd">Add</h3>
-                <h3 class="buttonEnd">Delete</h3>
+            <div class="formatText invoiceHeaders">
+                <div class="textPrices">
+                    <h3 class="itemTable">Item</h3>
+                    <h3 class="quantityTable">QTY</h3>
+                    <h3 class="priceTable">Price</h3>
+                    <h3 class="totalPrice">Total</h3>
+                </div>
+                <button class="removeButton headerStyle" aria-label="remove one" disabled>-1</i></button>
+                <button class="addButton headerStyle" aria-label="add one" disabled>+1</button>
+                <button class="deleteButton headerStyle" aria-label="delete item" disabled><i class="fas fa-times"></i></button>
             </div>
             <div class="invoice" aria-live="polite">
-                <button class="closeInvoice" aria-label="close"><i class="fas fa-times-circle"
-                        aria-hidden="true"></i></button>
+                <button class="closeInvoice" aria-label="close"><i class="fas fa-times-circle" aria-hidden="true"></i></button>
             </div>
         </div>
     </section>
@@ -189,7 +190,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="removeInvoiceConfirm styleModalButtons">Yes</button>
-                    <button type="button" class="close styleModalButtons" data-dismiss="modal" aria-label="Close">No</button>
+                    <button type="button" class="close styleModalButtons" data-dismiss="modal"
+                        aria-label="Close">No</button>
                 </div>
             </div>
         </div>
@@ -207,7 +209,8 @@
                     <p>Invoice Deleted Successfully!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="close styleModalButtons" data-dismiss="modal" aria-label="Close">OK</button>
+                    <button type="button" class="close styleModalButtons" data-dismiss="modal"
+                        aria-label="Close">OK</button>
                 </div>
             </div>
         </div>

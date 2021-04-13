@@ -230,15 +230,15 @@ button[disabled]:hover, button[disabled]:focus {
     background-repeat: no-repeat;
 }
 
-.headerNames {
-    display: flex;
-    justify-content: flex-end;
+.formatText.invoiceHeaders {
+    background-color: #ecebe4;
 }
 
-.buttonEnd {
-    width: 150px;
-    text-align: center;
-    font-weight: 700;
+.textPrices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
 }
 
 .invoiceAll {
@@ -250,25 +250,28 @@ button[disabled]:hover, button[disabled]:focus {
 
 .formatText {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     border: 2px solid #eef0f2;
     margin: 6px 0;
     padding: 0;
 }
 
-.totalPrice, .priceTable, .quantityTable, .detailsHeader {
+.totalPrice, .priceTable, .quantityTable {
     width: 10%;
-    min-width: 150px;
+    min-width: 120px;
     text-align: right;
     font-weight: 700;
 }
 
-.formatText button {
+.formatText .styleButtons {
     color: #6e7868;
+    margin: 3px 20px;
+}
+
+.formatText button {
     border: none;
     padding: 10px;
-    margin: 3px 20px;
     width: 65px;
 }
 
@@ -284,17 +287,14 @@ button[disabled]:hover, button[disabled]:focus {
     background: transparent;
 }
 
-button.removeButton {
-    margin-left: 100px;
+.headerStyle {
+    color: #1c1c1c;
+    font-weight: 700;
+    margin: -2px 20px 3px;
 }
 
-.remove {
-    margin-left: 80px;
-}
-
-.itemName {
-    text-align: left;
-    width: 40%;
+.headerStyle i {
+    font-size: 2rem;
 }
 
 /* Total amounts */
@@ -305,6 +305,8 @@ button.removeButton {
 
 .totalAmountsAll {
     border: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .totalAmounts label {
@@ -377,19 +379,12 @@ button.removeButton {
 
 
  /* Popover */
-/* .popover {
-  border: 2px dotted red;
-  background-color: #000;
-} */
-
 /* Popover Header */
 .popover-header {
   background-color: #eef0f2;
   color: #1c1c1c;
   font-size: 1.6rem;
   font-weight: 600;
-  /* text-align:center; */
-  /* width: 100%; */
 }
 
 /* Popover Body */
@@ -401,10 +396,8 @@ button.removeButton {
 }
 
 /* Modal */
-
 .modal-header {
     border-bottom: none;
-    /* background-color: #1c1c1c; */
     padding-bottom: 2px;
 }
 
@@ -450,6 +443,13 @@ button.removeButton {
 
 /* Media queries */
 
+@media (max-width: 1130px) {
+    .totalPrice, .priceTable, .quantityTable {
+        min-width: 90px;
+        width: 10%;
+    }
+}
+
 @media (max-width: 950px) {
     li {
         min-height: 200px;
@@ -458,9 +458,23 @@ button.removeButton {
     .description {
         min-height: 90px;
     }
+
+    /* Invoice */
+
+    .formatText .styleButtons {
+        margin: 2px 8px;
+    }
+
+    .quantityTable {
+        min-width: 70px;
+    }
+
+    .headerStyle {
+        margin: -2px 8px 2px;
+    }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 785px) {
 
     ul {
         align-items: center;
@@ -477,6 +491,62 @@ button.removeButton {
 
     h1 {
         font-size: 2rem;
+    }
+
+    /* Invoice */
+
+    .invoiceAll {
+        padding: 70px 10px;
+    }
+
+    .formatText {
+        font-size: 1.4rem;
+    }
+
+    .formatText i {
+        font-size: 2rem;
+    }
+
+    .formatText .styleButtons {
+        margin: 2px;
+    }
+
+    .headerStyle {
+        margin: -2px 2px 2px;
+    }
+
+    .totalPrice, .priceTable, .quantityTable {
+        padding: 2px;
+        border-left: 2px solid #ecebe4;
+    }
+
+    .totalPrice, .priceTable {
+        min-width: 70px;
+    }
+
+    .quantityTable {
+        min-width: 50px;
+    }
+
+    .closeInvoice {
+        right: -15px;
+    }
+
+    .closeInvoice i{
+        font-size: 2.5rem;
+    }
+
+    .totalAmounts .totalAmountDue {
+        padding-top: 5px;
+        font-size: 1.8rem;
+    }
+
+    .totalAmounts .final {
+        font-size: 1.8rem;
+    }
+
+    .totalAmounts input {
+        max-width: 100px;
     }
 }
 
@@ -510,6 +580,57 @@ button.removeButton {
     li {
         min-height: 200px;
     }
+
+    /* Invoice */
+
+    .totalPrice, .priceTable {
+        min-width: 50px;
+    }
+
+    .priceTable {
+        font-weight: normal;
+    }
+
+    .quantityTable {
+        min-width: 30px;
+    }
+
+    .formatText button {
+        width: 25px;
+        padding: 10px 2px;
+    }
+
+    .formatText i {
+        font-size: 1.6rem;
+    }
+
+    .itemTable {
+        width: 48%;
+    }
+
+    .headerStyle, .textPrices h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .totalAmounts {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .totalAmounts input{
+        max-width: none;
+        width: 100%;
+    }
+
+    .totalAmounts input {
+        padding: 5px;
+    }
+
+    .totalAmounts label {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -529,6 +650,16 @@ button.removeButton {
 
     li button {
         margin-left: 2px;
+    }
+
+    /* Invoice */
+
+    .formatText {
+        font-size: 1.3rem;
+    }
+
+    .itemTable {
+        width: 45%;
     }
 }
 
